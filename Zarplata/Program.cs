@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Domain;
+using Storage;
+using System;
 
 namespace Zarplata
 {
@@ -6,6 +8,7 @@ namespace Zarplata
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Hello World!");
         }
     }
