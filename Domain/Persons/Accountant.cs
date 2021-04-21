@@ -8,10 +8,19 @@ namespace Domain
 {
     public class Accountant : Person
     {
-        public Accountant(string name) : base(name, 45000)
+        byte Timeworked;
+        public decimal TotalPay { get; }
+        public Accountant(string name, byte timeworked) : base(name, 45000)
         {
 
-        }
+            Timeworked = timeworked;
+            decimal payPerDay = MonthlySalary / Settings.WorkTimeInMonth;
+            decimal totalPay = 0;
+            totalPay += payPerDay * Timeworked;
+            TotalPay = Math.Round(totalPay, 2);
 
+
+
+        }
     }
 }

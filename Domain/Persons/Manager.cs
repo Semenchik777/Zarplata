@@ -8,8 +8,18 @@ namespace Domain
 {
     public class Manager : Person
     {
-        public Manager(string name) : base(name, 40000)
+        byte Timeworked;
+        public decimal TotalPay { get; }
+        public Manager(string name, byte timeworked) : base(name, 40000)
         {
+
+            Timeworked = timeworked;
+            decimal payPerDay = MonthlySalary / Settings.WorkTimeInMonth;
+            decimal totalPay = 0;
+            totalPay += payPerDay * Timeworked;
+            TotalPay = Math.Round(totalPay, 2);
+
+
 
         }
 

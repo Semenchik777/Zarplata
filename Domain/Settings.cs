@@ -9,8 +9,8 @@ namespace Domain
     public static class Settings
     {
         /// <summary>
-        /// Кол-во рабочих часов в месяц минимум
+        /// Кол-во рабочих дней в месяц
         /// </summary>
-        public const int WorkTimeInMonth = 160;
+        public const byte WorkTimeInMonth = 21;
     }
 }
