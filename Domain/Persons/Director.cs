@@ -17,7 +17,7 @@ namespace Domain
             decimal payPerDay = MonthlySalary / Settings.WorkTimeInMonth;
             decimal totalPay = 0;
             totalPay += payPerDay * Timeworked;
-            TotalPay = Math.Round(totalPay, 2);
+            TotalPay = Math.Round(totalPay);
             
             
         }
